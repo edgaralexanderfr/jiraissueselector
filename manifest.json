@@ -1,0 +1,17 @@
+{
+  "name": "Jira Issue Selector",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Generador de ramas de issues en Jira a un click.",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background":{
+  	"scripts":["scripts.js"]
+  },
+  "permissions": ["activeTab"],
+  "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js":      ["content.js"]
+    }]
+}
