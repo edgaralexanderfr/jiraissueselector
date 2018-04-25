@@ -16,7 +16,7 @@ function onTextReceived (val) {
 		val[1] = val[1].replace(new RegExp(search[ i ], 'g'), replace[ i ]);
 	}
 
-	var finalText = type + '/' + val[0] + '-' + val[1];
+	var finalText = (type + '/' + val[0] + '-' + val[1]).toLowerCase();
 	var input     = document.createElement('input');
 	input.type    = 'text';
 	input.value   = finalText;
